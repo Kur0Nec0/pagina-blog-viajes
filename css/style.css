@@ -1,0 +1,192 @@
+/*Paul Irish boxing. Importante agregar*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    font-size: 62.5%; /*Para agregar 1rem = 10px*/ /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+}
+
+/*Fuente de la pagina*/
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*------------------------------------------------------ GLOBALES -----------------------------------------------------*/
+
+/*Imagen resposive*/
+img {
+    max-width: 100%;
+}
+p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+
+/*----------------------------------------------------- UTILIDADES ----------------------------------------------------*/
+
+/*Contenedor del contenido*/
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/*Botones*/
+.boton {
+    background-color: #00b8d4;
+    padding: 1rem 6rem;
+    display: inline-block;
+    margin-top: 1rem;
+    color: white; /*Color del link*/
+    text-decoration: none; /*Quitamos decoracion debajo de los links*/
+    font-weight: bold; /*Negritas*/
+    font-size: 1.5rem; /*Tamaño de la fuente*/
+    transition: background-color 0.3s; /*agregamos una transicion al colocar el mouse encima del boton con un pequeño delay*/
+}
+.boton:hover {
+    background-color: rgb(0, 134, 125); /*Al colocar el mouse encima del boton cambie de color*/
+}
+
+/*Navegacion responsive*/
+.menu-movil {
+    color: white;
+    font-size: 2rem;
+}
+/*-------------------------------------------------------- DEMAS ------------------------------------------------------*/
+
+/*Cabeza de la pagina*/
+.site-header {
+    padding: 2rem 0;
+}
+
+/*Navegacion*/
+.barra {
+    background-color: #db008d;
+}
+.navegacion-principal a {
+    color: white;
+    text-decoration: none; /*Quitar subrayado de los enlaces*/
+    font-size: 2.2rem;
+    display: block; /*Display block se encarga de alinear los elementos uno debajo del otro, lo contrario a display in-line*/
+    text-align: center;
+    padding: 2rem;
+}
+@media (min-width: 768px /*Que se aplique cuando la minima de la pantalla sea de 768px*/) {
+    .navegacion-principal a {
+        display: inline-block; /*Uno debajo del otro desde un telefono o tableta*/
+    }
+}
+.navegacion-principal a:hover {
+    background-color: #00b8d4; /*Cambiar coolor del enlace al pasar el mouse por encima de este*/
+}
+
+/*Contenedores de contenido principal*/
+.contenido-principal,
+.barra-side {
+    padding: 2rem; /*Le agregamos un padding para que no pegue tanto de los bordes a los lados*/
+}
+@media (min-width: 768px /*Que se aplique cuando la minima de la pantalla sea de 768px*/) {
+    .contenido-principal {
+        width: 70%;
+        float: left; /*Float izquierda para que se coloque a la izquierda de la pagina*/
+        padding: 0 2rem 0 0;
+    }
+    .barra-side {
+        width: 30%;
+        float: right; /*Float derecha para que se coloque a la derecha de la pagina*/
+        padding: 0;
+    }
+}
+
+/*Entradas*/
+h2 {
+    color: #00b8d4;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.entrada {
+    margin-bottom: 6rem;
+}
+.entrada:last-of-type {
+    margin-bottom: 0;
+}
+.entrada img {
+    display: block;
+}
+@media (min-width: 480px /*Que se aplique cuando la minima de la pantalla sea de 480px*/) {
+    .entrada img {
+        float: left;
+        width: 30rem;
+        margin: 0 3rem 3rem 0;
+    }
+}
+.entrada p {
+    text-align: justify; /*Justificamos el contenido del blog*/
+}
+
+/*Sidebar*/
+.barra-side ul {
+    list-style: none; /*Quitamos la decoracion de la lista*/
+    padding: 0;
+}
+.barra-side ul li {
+    padding: 1rem;
+}
+.barra-side ul li:hover {
+    background-color: #00b8d4; /*Al pasar por encima con el mouse cambia de color*/
+}
+.barra-side ul li a {
+    color: #00b8d4;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+.barra-side ul li:hover a {
+    color: white;
+}
+
+/*Footer*/
+.footer-sitio {
+    background-color: #db008d;
+    padding-top: 4rem;
+    margin-top: 4rem;
+    color: white; /*Color del texto*/
+    text-align: center;
+}
+.footer-sitio h2 {
+    color: white; /*Color del h2 del footer*/
+}
+.footer-sitio a {
+    color: white; /*Color del h2 del footer*/
+    text-decoration: none;
+    margin-right: 2rem;
+    font-size: 1.8rem;
+}
+.footer-sitio a:last-of-type {
+    margin-right: 0;
+}
+@media (min-width: 768px /*Que se aplique cuando la minima de la pantalla sea de 768px*/) {
+    .footer-sitio .nosotros {
+        float: left;
+        width: 30%;
+        text-align: left;
+    }
+    .footer-sitio .menu{
+        float: right;
+        width: 50%;
+        text-align: right;
+    }
+}
+.copyright {
+    background-color: #b10073;
+    margin: 5rem 0 0 0;
+    padding: 2rem 0 2rem 0;
+}
+
+
